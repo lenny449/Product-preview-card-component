@@ -1,0 +1,128 @@
+@import "./colors";
+@import "./large";
+
+*,
+::after,
+::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.4rem;
+	color: $very-dark-blue;
+    font-family: 'Montserrat', sans-serif;
+	background-color: $primary-cream;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	
+	margin: 1.6em;
+	border-radius: 8px;
+	background-color: $white;
+	overflow: hidden;
+	max-width: 600px;
+	display: flex;
+	// display: none;
+	flex-direction: column;
+	// align-items: ;
+	
+	&__img{
+		height: 244px;
+		width: 100%;
+		//flex-basis: content;
+		// background-color: red;
+		background-image: url(../images/image-product-mobile.jpg);
+		background-repeat: no-repeat;
+		background-position: top center;
+		background-size: cover;
+	}
+	&__content{
+		padding: 2.0em;
+		
+	}
+	&__category{
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		font-size: 1.2rem;
+		margin-bottom: 0.8em;
+		color: $dark-grayish-blue;
+	}
+	&__title{
+		font-family: 'Fraunces', sans-serif;
+		margin-bottom: 0.6em;
+	}
+	&__description{
+		color: $dark-grayish-blue;
+		margin-bottom: 2em;
+	}
+	&__prices{
+		display: flex;
+		align-items: center;
+		margin-bottom: 1em;
+	}
+	&__price{
+		margin-right: 0.5em;
+		&--new{
+			font-family: 'Fraunces', sans-serif;
+			color: $primary-dark-cyan;
+			font-size: 3rem;
+		}
+		&--old{
+			color: $dark-grayish-blue;
+			text-decoration: line-through;
+		}
+	}
+	&__btn-add-to-cart{
+		font-weight: 700;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: none;
+		color: white;
+		width: 100%;
+		padding: 1em 2em;
+		border-radius: 8px;
+		background-color: $primary-dark-cyan;
+		cursor: pointer;
+		transition: background-color 0.2s;
+		&:hover{
+			background-color: $primary-darker-cyan;
+		}
+	}
+	&__btn-add-to-cart-icon{
+		padding-right: 1em;
+	}
+}
+
+@media (min-width: 576px) {
+	.card {
+		flex-direction: row;
+		&__img{
+			background-image: url(../images/image-product-desktop.jpg);
+			// width: 300px;
+			flex-basis: 50%;
+			height: 450px;
+		}
+		&__content{
+			flex-basis: 50%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+	}
+}
+
+

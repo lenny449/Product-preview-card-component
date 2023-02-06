@@ -1,0 +1,121 @@
+@media (max-width: 1576px) {
+  .card {
+    background-color: red;
+    flex-direction: row;
+  }
+}
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  color: hsl(212deg, 21%, 14%);
+  font-family: "Montserrat", sans-serif;
+  background-color: hsl(30deg, 38%, 92%);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  margin: 1.6em;
+  border-radius: 8px;
+  background-color: hsl(0deg, 0%, 100%);
+  overflow: hidden;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+.card__img {
+  height: 244px;
+  width: 100%;
+  background-image: url(../images/image-product-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+.card__content {
+  padding: 2em;
+}
+.card__category {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 1.2rem;
+  margin-bottom: 0.8em;
+  color: hsl(228deg, 12%, 48%);
+}
+.card__title {
+  font-family: "Fraunces", sans-serif;
+  margin-bottom: 0.6em;
+}
+.card__description {
+  color: hsl(228deg, 12%, 48%);
+  margin-bottom: 2em;
+}
+.card__prices {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.card__price {
+  margin-right: 0.5em;
+}
+.card__price--new {
+  font-family: "Fraunces", sans-serif;
+  color: hsl(158deg, 36%, 37%);
+  font-size: 3rem;
+}
+.card__price--old {
+  color: hsl(228deg, 12%, 48%);
+  text-decoration: line-through;
+}
+.card__btn-add-to-cart {
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: white;
+  width: 100%;
+  padding: 1em 2em;
+  border-radius: 8px;
+  background-color: hsl(158deg, 36%, 37%);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.card__btn-add-to-cart:hover {
+  background-color: hsl(158deg, 40%, 25%);
+}
+.card__btn-add-to-cart-icon {
+  padding-right: 1em;
+}
+
+@media (min-width: 576px) {
+  .card {
+    flex-direction: row;
+  }
+  .card__img {
+    background-image: url(../images/image-product-desktop.jpg);
+    flex-basis: 50%;
+    height: 450px;
+  }
+  .card__content {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}/*# sourceMappingURL=main.css.map */
